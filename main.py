@@ -71,7 +71,7 @@ class LabelTool():
         # canvas = Canvas(frame, bg='#FFFFFF', width=300, height=300, scrollregion=(0, 0, 500, 500))
         hbar = Scrollbar(self.frame, orient=HORIZONTAL)
         hbar.config(command=self.mainPanel.xview)
-        hbar.grid(column=0, row=4, columnspan=6, sticky='SW')
+        hbar.grid(column=0, row=6, columnspan=6, sticky='WE')
         vbar = Scrollbar(self.frame, orient=VERTICAL)
         vbar.config(command=self.mainPanel.yview)
         vbar.grid(column=5, row=0, rowspan= 6,sticky='NS')
