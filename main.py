@@ -3,13 +3,12 @@
 # Purpose:     Label object bboxes for ImageNet Detection data
 # Original Author:     Qiushi
 # Created:      06/06/2014
-# Edited by:    Tooba Imtiaz
-# Edited:       29/04/2018
+# Edited by:    Rex Low
+# Edited:       13/11/2018
 #
 #-------------------------------------------------------------------------------
 from __future__ import division
-from Tkinter import *
-import tkMessageBox
+from tkinter import *
 from PIL import Image, ImageTk
 import os
 import glob
@@ -144,7 +143,7 @@ class LabelTool():
         self.imageDir = os.path.join(r'./Images', '%03d' %(self.category))
         self.imageList = glob.glob(os.path.join(self.imageDir, '*.jpeg'))
         if len(self.imageList) == 0:
-            print 'No .jpeg images found in the specified dir!'
+            print('No .jpeg images found in the specified dir!')
             return
 
         # default to the 1st image in the collection
@@ -157,7 +156,7 @@ class LabelTool():
             os.mkdir(self.outDir)
 
         self.loadImage()
-        print '%d images loaded from %s' %(self.total, s)
+        print('%d images loaded from %s' %(self.total, s))
 
     def loadImage(self):
         # load image
@@ -195,7 +194,7 @@ class LabelTool():
             #f.write('%d\n' %len(self.bboxList))
             for bbox in self.bboxList:
                 f.write(' '.join(map(str, bbox)) + '\n')
-        print 'Image No. %d saved' %(self.cur)
+        print('Image No. %d saved' %(self.cur))
 
 
     def mouseClick(self, event):
