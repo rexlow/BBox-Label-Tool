@@ -25,12 +25,23 @@ LabelTool
 
 Environment
 ----------
-- python 3.7
+- python 3.	6
 - python PIL (Pillow)
 
 Run
 -------
-$ python3 main.py
+`$ python3 main.py`
+
+Convert image format to jpeg
+----------------------------
+
+Install ImageMagick (only for macOS)
+
+`$ brew install imagemagick (if you are using macOS)`
+
+Convert old format to `jpeg`
+
+`$ for i in *.JPG ; do convert "$i" "${i%.*}.jpeg" ; done`
 
 Usage
 -----
