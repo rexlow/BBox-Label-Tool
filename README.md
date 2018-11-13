@@ -43,6 +43,10 @@ Convert old format to `jpeg`
 
 `$ for i in *.JPG ; do convert "$i" "${i%.*}.jpeg" ; done`
 
+Convert old format to `jpeg` and downscale image to 50% (Optional)
+
+`$ for i in *.JPG ; do convert "$i" -resize 50% "${i%.*}.jpeg" ; done`
+
 Usage
 -----
 0. The current tool requires that **the images to be labeled reside in /Images/001, /Images/002, etc. You will need to modify the code if you want to label images elsewhere**.
